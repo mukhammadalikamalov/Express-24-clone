@@ -1,0 +1,80 @@
+/* Restaurants.css */
+.restaurants-container {
+    padding: 20px;
+}
+
+.restaurants-container h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.restaurants-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.restaurant-card {
+    width: calc(30.90% - 50px);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+    overflow: hidden;
+    margin-left: 32px;
+    margin-right: 32px;
+    border: none;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    border: none;
+}
+
+.restaurant-info {
+    padding: 16px;
+}
+
+.restaurant-name {
+    font-weight: 750;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    margin-left: 32px;
+}
+
+.restaurant-card {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.restaurant-images {
+    position: relative;
+}
+
+.restaurant-cover {
+    width: 200px;
+    /* Adjust the width of the cover image */
+    height: auto;
+}
+
+.restaurant-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    /* Set the height of the logo */
+    width: 50px;
+    /* Set the width of the logo */
+    border-radius: 50%;
+    /* Make it circular */
+    margin: 10px;
+    /* Adjust margin as needed */
+}
