@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom'; // Import NavLink
 import ButtonAppBar from './Header';
 import './Restaurants.css'; // Import CSS file for styling
@@ -42,7 +42,7 @@ const Restaurants = () => {
                         </div>
                         <div className="restaurant-info">
                             <div className="restaurant-name">{restaurant.name}</div>
-                            <NavLink to={`/restaurant/${restaurant.id}`} className="restaurant-more">More</NavLink>
+                            <NavLink to={`/restaurants/${restaurant.id}`} className="restaurant-more">More</NavLink> {/* Corrected NavLink */}
                         </div>
                     </div>
                 ))}

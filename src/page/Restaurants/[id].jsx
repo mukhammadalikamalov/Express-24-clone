@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const RestaurantById = () => {
     const { id } = useParams();
-    const [restaurant, setRestaurant] = useState(null);
+    const [restaurant, setRestaurant] = useState({});
 
     useEffect(() => {
         const fetchRestaurantById = async () => {
@@ -21,24 +21,10 @@ const RestaurantById = () => {
 
     return (
         <div>
-            {restaurant ? (
+            {restaurant.name && (
                 <div>
-                    <p>Name: {restaurant.name}</p>
                     <p>ID: {restaurant.id}</p>
-                    <h2>Products</h2>
-                    <div className="product-cards">
-                        {restaurant.products.map(product => (
-                            <div className="product-card" key={product.id}>
-                                <p>Title: {product.title}</p>
-                                <p>Category: {product.category}</p>
-                                <p>Price: {product.price}</p>
-                                {/* Render other product details as needed */}
-                            </div>
-                        ))}
-                    </div>
                 </div>
-            ) : (
-                <p>Loading...</p>
             )}
         </div>
     );

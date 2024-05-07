@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "../App";
 import About from "../page/About";
+import Restaurants from "../page/Restaurants/Restaurants.Page";
+import RestaurantById from "../page/Restaurants/[id]";
 import FoodById from "../page/[id]";
 import AlbumById from "../page/album/[id]";
 import Album from "../page/album/album";
@@ -9,8 +11,6 @@ import PhotosById from "../page/photos/[id]";
 import Photos from "../page/photos/photos";
 import ProductById from "../page/photos/product/[id]";
 import Product from "../page/photos/product/product";
-import Restaurants from "../page/Restaurants/Restaurants.Page";
-import RestaurantById from "../page/Restaurants/[id]";
 
 const Router = () => {
   return (
@@ -26,7 +26,7 @@ const Router = () => {
         <Route path="/album" element={<Album />}></Route>
         <Route path="/album/:id" element={<AlbumById />} />
         <Route path="/restaurants" element={<Restaurants />} />
-        <Route path="/restaurant/:id" element={<RestaurantById />} />
+        <Route path="/restaurants/:id" element={<RestaurantById />} />
       </Routes>
     </BrowserRouter >
   );
